@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_all_criptomoedas"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Todas Criptomoedas"/>
+        <item
+                android:id="@+id/nav_by_cripto"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Por CriptoMoeda"/>
+        <item
+                android:id="@+id/nav_by_exchanges"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Por Exchanges"/>
+        <item
+                android:id="@+id/nav_cotacao_by_cripto"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Cotação Por Criptomoeda"/>
+
+        <item
+                android:id="@+id/nav_cotacao_by_exchanges"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Cotação Por Exchanges"/>
+    </group>
+
+</menu>
