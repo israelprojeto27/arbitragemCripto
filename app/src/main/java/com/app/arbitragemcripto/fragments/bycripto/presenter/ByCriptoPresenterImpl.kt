@@ -4,6 +4,7 @@ class ByCriptoPresenterImpl (val view : ByCriptoContract.ByCriptoView) : ByCript
 
 
     override fun loadAnalyzeByCripto(valorEntrada: String, cripto: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        view.showCardViewResult(true)
+        view.showProgress(true)
     }
 }

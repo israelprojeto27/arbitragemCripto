@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content" android:id="@+id/linearLayout">
+
+    <TextView
+            android:text="Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelAdapterListaCotacao" android:textSize="20sp"
+            android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="Valor Cotação"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12" android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/labelAdapterListaCotacao" android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/labelAdapterListaCotacao"/>
+    <TextView
+            android:text="Bitcoin Cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLabelCotacao" android:layout_marginStart="101dp"
+            app:layout_constraintStart_toEndOf="@+id/labelAdapterListaCotacao"
+            app:layout_constraintBottom_toBottomOf="@+id/labelAdapterListaCotacao"
+            app:layout_constraintTop_toTopOf="@+id/labelAdapterListaCotacao"/>
+    <TextView
+            android:text="R$ 1200,00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textValorCotacao" app:layout_constraintStart_toStartOf="@+id/textLabelCotacao"
+            app:layout_constraintBottom_toBottomOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/textView12"/>
+
+
+    <View
+            android:id="@+id/view360"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textValorCotacao"
+            android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
