@@ -15,7 +15,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/spinnerByCriptoFragment"
             app:layout_constraintVertical_chainStyle="packed" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="15dp" app:layout_constraintVertical_bias="0.71000004"/>
+            android:layout_marginStart="15dp" app:layout_constraintVertical_bias="0.48000002"
+            android:layout_marginTop="70dp"/>
     <TextView
             android:text="Valor Entrada"
             android:layout_width="wrap_content"
@@ -27,22 +28,24 @@
             app:layout_constraintBottom_toTopOf="@+id/valorEntradaByCriptoFragment" android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="@+id/spinnerByCriptoFragment"/>
     <EditText
-            android:layout_width="376dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
             android:id="@+id/valorEntradaByCriptoFragment"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:layout_constraintBottom_toTopOf="@+id/btnAnalisarByCripto"
-            app:layout_constraintStart_toStartOf="@+id/textView3"/>
+            app:layout_constraintStart_toStartOf="@+id/textView3" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"/>
     <Button
             android:text="Analisar"
-            android:layout_width="357dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnAnalisarByCripto"
             app:layout_constraintTop_toBottomOf="@+id/valorEntradaByCriptoFragment"
             app:layout_constraintBottom_toTopOf="@+id/view760" android:layout_marginTop="20dp"
-            app:layout_constraintStart_toStartOf="@+id/valorEntradaByCriptoFragment"/>
+            app:layout_constraintStart_toStartOf="@+id/valorEntradaByCriptoFragment"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="20dp"/>
 
     <View
             android:id="@+id/view760"
@@ -52,21 +55,22 @@
             app:layout_constraintTop_toBottomOf="@+id/btnAnalisarByCripto"
             app:layout_constraintBottom_toTopOf="@+id/cardViewResultadoByCripto" android:layout_marginTop="10dp"/>
     <Spinner
-            android:layout_width="375dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:id="@+id/spinnerByCriptoFragment"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layout_constraintBottom_toTopOf="@+id/textView3" app:layout_constraintStart_toStartOf="@+id/textView2"
-    />
+            android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"/>
 
-    <androidx.cardview.widget.CardView android:layout_width="411dp"
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
                                        android:layout_height="300dp"
                                        android:id="@+id/cardViewResultadoByCripto"
                                        android:visibility="invisible"
                                        app:layout_constraintBottom_toBottomOf="parent"
                                        app:layout_constraintTop_toBottomOf="@+id/view760"
                                        android:layout_marginTop="30dp" app:layout_constraintStart_toStartOf="parent"
-                                       app:layout_constraintEnd_toEndOf="parent">
+                                       app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="10dp"
+                                       android:layout_marginEnd="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

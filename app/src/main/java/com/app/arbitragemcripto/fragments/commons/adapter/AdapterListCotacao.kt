@@ -49,7 +49,7 @@ class AdapterListCotacao : RecyclerView.Adapter<AdapterListCotacao.ViewHolder> {
 
         holder.itemView.apply {
             textLabelCotacao.text = cotacaoDto.label
-            textValorCotacao.text = cotacaoDto.value
+            textValorCotacao.text = cotacaoDto.value.toString()
 
             if (tipoCotacao.equals("porCripto")){
                 labelAdapterListaCotacao.text = "Exchange"

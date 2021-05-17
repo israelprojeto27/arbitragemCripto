@@ -1,6 +1,6 @@
 package com.app.arbitragemcripto.fragments.bycripto.presenter
 
-import com.app.arbitragemcripto.fragments.commons.dto.ResponseCriptoDto
+import com.app.arbitragemcripto.fragments.service.dto.ResponseArbitragemCriptoMoedaDto
 
 interface ByCriptoContract {
 
@@ -8,7 +8,7 @@ interface ByCriptoContract {
         fun init()
         fun showProgress(visible: Boolean)
         fun showCardViewResult(visible: Boolean)
-        fun loadResultByCripto(result: ResponseCriptoDto)
+        fun loadResultByCripto(result: ResponseArbitragemCriptoMoedaDto)
     }
 
     interface ByCriptoPresenter {

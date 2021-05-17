@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/labelAdapterListaCotacao" android:textSize="20sp"
             android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp" app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginTop="15dp" app:layout_constraintTop_toTopOf="parent"/>
     <TextView
             android:text="Valor Cotação"
             android:layout_width="wrap_content"

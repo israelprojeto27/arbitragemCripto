@@ -14,6 +14,7 @@ import com.app.arbitragemcripto.R
 import com.app.arbitragemcripto.fragments.commons.dto.ResponseCriptoDto
 import com.app.arbitragemcripto.fragments.allcriptos.presenter.AllCriptosContract
 import com.app.arbitragemcripto.fragments.allcriptos.presenter.AllCriptosPresenterImpl
+import com.app.arbitragemcripto.fragments.service.dto.ResponseArbitragemCriptoMoedaDto
 import kotlinx.android.synthetic.main.fragment_all_criptos.*
 import kotlinx.android.synthetic.main.fragment_all_criptos.view.*
 
@@ -48,26 +49,29 @@ class AllCriptosFragment : Fragment(), AllCriptosContract.AllCriptosView {
         }
     }
 
+
+
     override fun init() {
         presenter = AllCriptosPresenterImpl(this)
         mContext = this.context!!
+        showProgress(false)
     }
 
     override fun showProgress(visible: Boolean) {
         if ( visible )
-            progressBarAllCriptosFragment.visibility = View.VISIBLE
+            view?.progressBarAllCriptosFragment?.visibility = View.VISIBLE
         else
-            progressBarAllCriptosFragment.visibility = View.INVISIBLE
+            view?.progressBarAllCriptosFragment?.visibility = View.INVISIBLE
     }
 
     override fun showCardViewResult(visible: Boolean) {
         if ( visible )
-            cardViewResultadoAllCriptos.visibility = View.VISIBLE
+            view?.cardViewResultadoAllCriptos?.visibility = View.VISIBLE
         else
-            cardViewResultadoAllCriptos.visibility = View.INVISIBLE
+            view?.cardViewResultadoAllCriptos?.visibility = View.INVISIBLE
     }
 
-    override fun loadResultAllCripto(result: ResponseCriptoDto) {
+    override fun loadResultAllCripto(result: ResponseArbitragemCriptoMoedaDto) {
         criptoMoedaSelecionadaAllCriptosFragment.text = result.nomeCriptoMoeda
         exchangeCompraAllCriptosFragment.text = result.exchangeCompra
         precoCompraAllCriptosFragment.text = result.valorCompra.toString()

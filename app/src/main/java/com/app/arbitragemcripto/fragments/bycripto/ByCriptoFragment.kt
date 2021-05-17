@@ -17,6 +17,7 @@ import com.app.arbitragemcripto.fragments.bycripto.presenter.ByCriptoContract
 import com.app.arbitragemcripto.fragments.bycripto.presenter.ByCriptoPresenterImpl
 import com.app.arbitragemcripto.fragments.commons.dto.ResponseCriptoDto
 import com.app.arbitragemcripto.fragments.commons.enumerate.CriptoMoedaEnum
+import com.app.arbitragemcripto.fragments.service.dto.ResponseArbitragemCriptoMoedaDto
 import kotlinx.android.synthetic.main.fragment_by_cripto.*
 import kotlinx.android.synthetic.main.fragment_by_cripto.view.*
 
@@ -95,7 +96,7 @@ class ByCriptoFragment : Fragment() , ByCriptoContract.ByCriptoView {
             cardViewResultadoByCripto.visibility = View.INVISIBLE
     }
 
-    override fun loadResultByCripto(result: ResponseCriptoDto) {
+    override fun loadResultByCripto(result: ResponseArbitragemCriptoMoedaDto) {
         criptoMoedaSelecionadaByCriptoFragment.text = result.nomeCriptoMoeda
         exchangeCompraByCriptoFragment.text = result.exchangeCompra
         precoCompraByCriptoFragment.text = result.valorCompra.toString()
@@ -107,6 +108,4 @@ class ByCriptoFragment : Fragment() , ByCriptoContract.ByCriptoView {
         valorLucroBrutoByCriptoFragment.text = result.valorLucro.toString()
         totalTaxasByCriptoFragment.text = result.totalTaxa.toString()
     }
-
-
 }
